@@ -1,13 +1,12 @@
 import Navbar from "@/Components/Navbar";
+import {Head} from "@inertiajs/react";
 
-export default function Main({user, page, children}) {
+export default function Main({user, title, children}) {
     return (
         <>
-            <Navbar page={page} />
-            <h1>{user.name}</h1>
+            <Head title={title}/>
+            <Navbar page={title} user={user}/>
             <main>{children}</main>
-            <div>
-            </div>
         </>
     )
 }
