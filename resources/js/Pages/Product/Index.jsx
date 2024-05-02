@@ -46,14 +46,17 @@ export default function Index({auth, gg, products}) {
                                                 {product.name}
                                             </th>
                                             <td className="px-6 py-4">
-                                                Silver
+                                                {product.color}
                                             </td>
                                             <td className="px-6 py-4">
                                                 {product.price}
                                             </td>
                                             <td className="px-6 py-4 text-right">
-                                                <a href="#"
-                                                   className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                                {/* <a href="#"
+                                                   className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a> */}
+
+                                                <Link href={route('products.delete', product.id)}
+                                                   className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</Link>
                                             </td>
                                         </tr>
                                     )
